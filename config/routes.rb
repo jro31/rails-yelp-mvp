@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     post 'restaurants', to: 'restaurants#create'
   #Read
     get 'restaurants', to: 'restaurants#index'
-    get 'restaurants/:id', to: 'restaurants#show'
+    get 'restaurants/:id', to: 'restaurants#show', as: :restaurant
   #Update
     get 'restaurants/:id/edit', to: 'restaurants#edit'
     patch 'restaurants/:id', to: 'restaurants#update'

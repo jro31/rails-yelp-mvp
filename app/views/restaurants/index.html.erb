@@ -1,13 +1,13 @@
 <h1>All the restaurants:</h1>
 
-<ul>
-  <% num = 1 %>
+<ol>
   <% @restaurants.each do |r| %>
   <li>
-    <h2><%= num %>. <%= r.name %></h2>
+    <%= link_to restaurant_path(r) do %>
+    <h2><%= r.name %></h2>
+    <% end %>
     <p>Location: <%= r.address %></p>
     <p>Type: <%= r.category %></p>
   </li>
-  <% num += 1 %>
   <% end %>
-</ul>
+</ol>
