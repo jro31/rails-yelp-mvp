@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     get 'restaurants', to: 'restaurants#index'
     get 'restaurants/:id', to: 'restaurants#show', as: :restaurant
   #Update
-    get 'restaurants/:id/edit', to: 'restaurants#edit'
+    get 'restaurants/:id/edit', to: 'restaurants#edit', as: :edit_restaurant
     patch 'restaurants/:id', to: 'restaurants#update'
   #Destroy
-    delete 'restaurant/:id', to: 'restaurants#destroy'
+    delete 'restaurants/:id', to: 'restaurants#destroy', as: :delete_restaurant
 end
